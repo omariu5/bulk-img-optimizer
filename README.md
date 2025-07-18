@@ -8,7 +8,7 @@ This script optimizes and resizes all images in a specified directory using Pill
 - Supports batch processing of all images in a directory
 
 ## Requirements
-- Python 3.7+
+- Python 3.11+
 - Pillow (see `requirements.txt`)
 
 ## Installation
@@ -23,13 +23,13 @@ Run the script from the command line:
 
 
 ```sh
-python img.py -d /path/to/images [-o 80] [-w 800] [-h 600]
+python img.py -d /path/to/images [-o 80] [-w 800] [-H 600]
 ```
 
 - `-d`, `--directory` : Directory containing images (**required**)
 - `-o`, `--optimize`  : Optimization quality percentage (1-100, default: 70)
 - `-w`, `--width`     : Target width (default: original image width)
-- `-h`, `--height`    : Target height (default: original image height)
+- `-H`, `--height`    : Target height (default: original image height)
 
 
 
@@ -50,13 +50,13 @@ The optimized images will be saved in a subdirectory called `optimized` inside t
 python img.py -d ./images
 
 # With custom optimization and resizing
-python img.py -d ./images -o 75 -w 1024 -h 768
+python img.py -d ./images -o 75 -w 1024 -H 768
 
 # Preserve aspect ratio by specifying only width
 python img.py -d ./images -w 800
 
 # Preserve aspect ratio by specifying only height
-python img.py -d ./images -h 600
+python img.py -d ./images -H 600
 ```
 
 ## Donate
